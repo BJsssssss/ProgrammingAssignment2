@@ -6,8 +6,8 @@
 ## How to use from command line:
 ##
 ## > source('cachematrix.R')
-## > m <- makeCacheMatrix(<matrix>)
-## > cacheSolve(m)
+## > j <- makeCacheMatrix(<matrix>)
+## > cacheSolve(j)
 
 ## Create the matrix, which is a list containing
 ## (a) a function to input and output the value of the original matrix
@@ -44,8 +44,8 @@ cacheSolve <- function(x, ...) {
         return(i)
     }
 
-    m <- x$get()
-    i <- solve(m, ...)
+    j <- x$get()
+    i <- solve(j, ...)
     x$setinverse(i)
 
     i
